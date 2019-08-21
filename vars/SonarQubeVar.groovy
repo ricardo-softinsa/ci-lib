@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def sonarAnalysis(scannerName, sonarServerName){
+def call(){
     withSonarQubeEnv(sonarServerName) {
         sh "scannerName/bin/sonar-scanner" 
     }
