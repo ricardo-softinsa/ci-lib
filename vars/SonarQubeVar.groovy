@@ -2,6 +2,6 @@
 
 def call(String sonarScanner, String sonarServerName){
     withSonarQubeEnv(sonarServerName) {
-        sh "${sonarScanner}bin/sonar-scanner" 
+        sh "${sonarScanner}/bin/sonar-scanner" 
     }
 }
