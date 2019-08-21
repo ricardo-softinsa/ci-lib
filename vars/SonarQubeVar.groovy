@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
-def call(String name){
-    echo "Hello, ${name}."
+def call(String sonarScanner, String sonarServerName){
+    withSonarQubeEnv(${sonarServerName}) {
+        sh "${sonarScanner}bin/sonar-scanner" 
+    }
 }
